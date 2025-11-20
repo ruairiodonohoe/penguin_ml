@@ -17,6 +17,11 @@ st.write(
     " to get started!"
 )
 
+password_guess = st.text_input("What is the Password?")
+if password_guess != st.secrets["password"]:
+    st.stop()
+
+
 penguin_file = st.file_uploader("Upload your own penguin data.")
 outputs_dir = Path(__file__).parent / "outputs"
 
