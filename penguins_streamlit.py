@@ -109,7 +109,7 @@ st.write(
  your the inputted value."""
 )
 
-data_dir = Path(__file__).resolve().parents[1] / "data"
+data_dir = Path(__file__).parent / "data"
 penguin_df = pd.read_csv(data_dir / "penguins.csv")
 fig, ax = plt.subplots()
 ax = sns.histplot(x=penguin_df["bill_length_mm"], hue=penguin_df.species)
